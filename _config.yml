@@ -1,21 +1,32 @@
-# This is the default format. 
-# For more see: http://jekyllrb.com/docs/permalinks/
-permalink: /:categories/:year/:month/:day/:title 
+
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-highlighter: pygments
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Jekyll Bootstrap
-tagline: Site Tagline
+title : Snap Corner
+description: A corner for memorizing some things.
+tagline: A corner for memorizing some things.
 author :
-  name : Name Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
-  feedburner : feedname
+  name : shinja 
+  email : shin.ja@hotmail.com
+  github : shinja
+  twitter : 
+  feedburner : 
+
+# This is the default format. 
+# For more see: http://jekyllrb.com/docs/permalinks/
+# permalink: /:categories/:year/:month/:day/:title 
+permalink: "blog/:categories/:title/"
+paginate_path: "page:num/"
+paginate: 5 
+
+highlighter: pygments
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "strikethrough", "superscript", "with_toc_data"]
+
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -25,7 +36,7 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://username.github.io
+production_url : http://shinja.github.io
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -80,7 +91,7 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider : disqus
+    provider : false #disqus
     disqus :
       short_name : jekyllbootstrap
     livefyre :
@@ -100,7 +111,7 @@ JB :
   # Set 'provider' to false to turn analytics off globally.
   #        
   analytics :
-    provider : google
+    provider : false #google
     gauges :
         site_id : 'SITE ID'
     google : 
